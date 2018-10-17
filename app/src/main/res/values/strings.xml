@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MuseoPrado</string>
+    <string name="agent">Diego Velazquez</string>
+    <string name="action_settings">Settings</string>
+    <string name="logo"> Logo</string>
+    <string name="speechbtn_listening">Listening...</string>
+    <string name="check_internet_connection">Please check your Internet connection</string>
+    <string name="permission_denied">Esta aplicación no funciona sin acceso al micrófono</string>
+    <string name="permission_explanation">Es necesario acceder al micrófono para el reconocimiento de su voz"</string>
+</resources>
