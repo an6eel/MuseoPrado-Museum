@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RelativeLayout ls =(RelativeLayout) findViewById(R.id.mainlayout);
+        LinearLayout ls =(LinearLayout) findViewById(R.id.mainlayout);
         ls.setBackgroundColor(Color.parseColor("#FCE4B2"));
     }
 

@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Sun Oct 21 20:14:36 CEST 2018
+1.base=/home/angel/Descargas/MuseoPrado-Museum/app/build/intermediates/transforms/dexMerger/androidTest/debug/0
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=/home/angel/Descargas/MuseoPrado-Museum/app/build/intermediates/transforms/dexMerger/androidTest/debug/1
+1.path=classes.dex

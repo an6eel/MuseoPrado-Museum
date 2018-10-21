@@ -84,6 +84,7 @@ public class Chat {
         chat.setDateSeparatorTextColor(Color.BLACK);
         chat.setMessageMarginTop(5);
         chat.setMessageMarginBottom(15);
+        chat.setMessageMaxWidth(800);
     }
 
     protected void putRequest(String msg){

@@ -1,0 +1,210 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:1-33:12
+MERGED from [com.android.support:design:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b491044152f9a1115d6d730227b875c5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/429322fa788cf0c3ecbf31f51fb2b278/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/angel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/155b61922710266ffcdfaa41640abd61/AndroidManifest.xml:2:1-11:12
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.16-SNAPSHOT] /home/angel/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.16-SNAPSHOT.aar/5046e6b8a6f38542cc41fa16f0c61a1c/AndroidManifest.xml:2:1-10:12
+MERGED from [com.github.kittinunf.fuel:fuel-android:1.12.1] /home/angel/.gradle/caches/transforms-1/files-1.1/fuel-android-1.12.1.aar/4a4905947696035aaed9c4811066acc8/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bassaer:chatmessageview:1.11.2] /home/angel/.gradle/caches/transforms-1/files-1.1/chatmessageview-1.11.2.aar/55d126040e450cd11b84840ffd083a88/AndroidManifest.xml:2:1-17:12
+MERGED from [ai.api:sdk:2.0.7] /home/angel/.gradle/caches/transforms-1/files-1.1/sdk-2.0.7.aar/ba7030c26c2f17cfe81bb1b89366d3f4/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2012eeafa874a2dcce17a2b521da5556/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/495ce47354b6dea75a4e86cb84f33512/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/f50cee6e9d4573302186f4e07131e390/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/c1fe3a78a7ab68e3d46d36300a0d2a8f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/7d193ce19eafb0a96fa0d970029db513/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/22b24800f5ea060d5b8c06b349e27c76/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/ca973a937ffd54e085dab8abd7e5975c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/30c41ce6d87f2c727c52a57dc2521ee2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/f0bde80f19ad3258ee576462a76248c9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/f1f3477a401235fd021d8cfcba1597fd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/53bda5144f2427f98d7ccbe3bc88a9b5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/176f58a368cb71ef098ecbf9c059277d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/b1a838e87aecbb1e8129d60684dd7b82/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/70f3e602c60bf2be0031e04568ab336b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f41060472a749d4b59d67c71173521a4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/33cf51ddad32b6310897d05a35add520/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c344926807f6a87fb006055825635670/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/80883562da1e9df3d043349f1818ac46/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/17c5531abc8456bbca0cd071c8a9845a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/88d0b0a10af07c7601bb99c6ed08f9b6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/8daaa1974bc2decf0e25d6ad476d42cf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/d47f2134ba4bd07ed03da3b2aa7732b0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/9ff3f58d40e12f6cf60a3f81454ae50a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/43c72967153057f2a12744f298f3d00e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/bdb733ac6087bf8a8cdef395aa925865/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/6340c2d0dfb67a67685f3e1345587ade/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/a2df4be24c75ce6d9f553ce713e68c74/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/e290fe6b247c8e9468535430c85c6395/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:3:5-43
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:4:5-66
+	android:name
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:5:5-71
+	android:name
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:5:22-68
+application
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:6:5-31:19
+MERGED from [com.android.support:design:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b491044152f9a1115d6d730227b875c5/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b491044152f9a1115d6d730227b875c5/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/angel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/155b61922710266ffcdfaa41640abd61/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/angel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/155b61922710266ffcdfaa41640abd61/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bassaer:chatmessageview:1.11.2] /home/angel/.gradle/caches/transforms-1/files-1.1/chatmessageview-1.11.2.aar/55d126040e450cd11b84840ffd083a88/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.bassaer:chatmessageview:1.11.2] /home/angel/.gradle/caches/transforms-1/files-1.1/chatmessageview-1.11.2.aar/55d126040e450cd11b84840ffd083a88/AndroidManifest.xml:11:5-15:19
+MERGED from [ai.api:sdk:2.0.7] /home/angel/.gradle/caches/transforms-1/files-1.1/sdk-2.0.7.aar/ba7030c26c2f17cfe81bb1b89366d3f4/AndroidManifest.xml:11:5-20
+MERGED from [ai.api:sdk:2.0.7] /home/angel/.gradle/caches/transforms-1/files-1.1/sdk-2.0.7.aar/ba7030c26c2f17cfe81bb1b89366d3f4/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/33cf51ddad32b6310897d05a35add520/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/33cf51ddad32b6310897d05a35add520/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c344926807f6a87fb006055825635670/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c344926807f6a87fb006055825635670/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/33cf51ddad32b6310897d05a35add520/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:9:9-41
+	android:icon
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:8:9-43
+	android:allowBackup
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.agarc.museoprado.MainActivity
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:12:9-21:20
+	android:label
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:14:13-45
+	android:theme
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:15:13-56
+	android:name
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:13:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:19:27-74
+activity#com.example.agarc.museoprado.VoiceActivity
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:22:9-30:20
+	android:screenOrientation
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:25:13-49
+	android:label
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:24:13-42
+	android:theme
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:26:13-56
+	android:name
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:23:13-42
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:27:13-29:77
+	android:value
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:29:17-75
+	android:name
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml:28:17-63
+uses-sdk
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b491044152f9a1115d6d730227b875c5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b491044152f9a1115d6d730227b875c5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/429322fa788cf0c3ecbf31f51fb2b278/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/429322fa788cf0c3ecbf31f51fb2b278/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/angel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/155b61922710266ffcdfaa41640abd61/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/angel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/155b61922710266ffcdfaa41640abd61/AndroidManifest.xml:5:5-7:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.16-SNAPSHOT] /home/angel/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.16-SNAPSHOT.aar/5046e6b8a6f38542cc41fa16f0c61a1c/AndroidManifest.xml:6:5-8:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.16-SNAPSHOT] /home/angel/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.16-SNAPSHOT.aar/5046e6b8a6f38542cc41fa16f0c61a1c/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.kittinunf.fuel:fuel-android:1.12.1] /home/angel/.gradle/caches/transforms-1/files-1.1/fuel-android-1.12.1.aar/4a4905947696035aaed9c4811066acc8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.kittinunf.fuel:fuel-android:1.12.1] /home/angel/.gradle/caches/transforms-1/files-1.1/fuel-android-1.12.1.aar/4a4905947696035aaed9c4811066acc8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bassaer:chatmessageview:1.11.2] /home/angel/.gradle/caches/transforms-1/files-1.1/chatmessageview-1.11.2.aar/55d126040e450cd11b84840ffd083a88/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bassaer:chatmessageview:1.11.2] /home/angel/.gradle/caches/transforms-1/files-1.1/chatmessageview-1.11.2.aar/55d126040e450cd11b84840ffd083a88/AndroidManifest.xml:7:5-9:41
+MERGED from [ai.api:sdk:2.0.7] /home/angel/.gradle/caches/transforms-1/files-1.1/sdk-2.0.7.aar/ba7030c26c2f17cfe81bb1b89366d3f4/AndroidManifest.xml:7:5-9:41
+MERGED from [ai.api:sdk:2.0.7] /home/angel/.gradle/caches/transforms-1/files-1.1/sdk-2.0.7.aar/ba7030c26c2f17cfe81bb1b89366d3f4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-fragment:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2012eeafa874a2dcce17a2b521da5556/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2012eeafa874a2dcce17a2b521da5556/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/495ce47354b6dea75a4e86cb84f33512/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/495ce47354b6dea75a4e86cb84f33512/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/f50cee6e9d4573302186f4e07131e390/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/f50cee6e9d4573302186f4e07131e390/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/c1fe3a78a7ab68e3d46d36300a0d2a8f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/c1fe3a78a7ab68e3d46d36300a0d2a8f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/7d193ce19eafb0a96fa0d970029db513/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/7d193ce19eafb0a96fa0d970029db513/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/22b24800f5ea060d5b8c06b349e27c76/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/22b24800f5ea060d5b8c06b349e27c76/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/ca973a937ffd54e085dab8abd7e5975c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/ca973a937ffd54e085dab8abd7e5975c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/30c41ce6d87f2c727c52a57dc2521ee2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/30c41ce6d87f2c727c52a57dc2521ee2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/f0bde80f19ad3258ee576462a76248c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/f0bde80f19ad3258ee576462a76248c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/f1f3477a401235fd021d8cfcba1597fd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/f1f3477a401235fd021d8cfcba1597fd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/53bda5144f2427f98d7ccbe3bc88a9b5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/53bda5144f2427f98d7ccbe3bc88a9b5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/176f58a368cb71ef098ecbf9c059277d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/176f58a368cb71ef098ecbf9c059277d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/b1a838e87aecbb1e8129d60684dd7b82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/b1a838e87aecbb1e8129d60684dd7b82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/70f3e602c60bf2be0031e04568ab336b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/70f3e602c60bf2be0031e04568ab336b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f41060472a749d4b59d67c71173521a4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f41060472a749d4b59d67c71173521a4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/33cf51ddad32b6310897d05a35add520/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/33cf51ddad32b6310897d05a35add520/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c344926807f6a87fb006055825635670/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c344926807f6a87fb006055825635670/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/80883562da1e9df3d043349f1818ac46/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/80883562da1e9df3d043349f1818ac46/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/17c5531abc8456bbca0cd071c8a9845a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/17c5531abc8456bbca0cd071c8a9845a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/88d0b0a10af07c7601bb99c6ed08f9b6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/88d0b0a10af07c7601bb99c6ed08f9b6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/8daaa1974bc2decf0e25d6ad476d42cf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/8daaa1974bc2decf0e25d6ad476d42cf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/d47f2134ba4bd07ed03da3b2aa7732b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/d47f2134ba4bd07ed03da3b2aa7732b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/9ff3f58d40e12f6cf60a3f81454ae50a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/9ff3f58d40e12f6cf60a3f81454ae50a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/43c72967153057f2a12744f298f3d00e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/43c72967153057f2a12744f298f3d00e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/bdb733ac6087bf8a8cdef395aa925865/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/angel/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/bdb733ac6087bf8a8cdef395aa925865/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/6340c2d0dfb67a67685f3e1345587ade/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/6340c2d0dfb67a67685f3e1345587ade/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/a2df4be24c75ce6d9f553ce713e68c74/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/a2df4be24c75ce6d9f553ce713e68c74/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/e290fe6b247c8e9468535430c85c6395/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/angel/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/e290fe6b247c8e9468535430c85c6395/AndroidManifest.xml:20:5-44
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+		ADDED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml
+		INJECTED from /home/angel/Descargas/MuseoPrado-Museum/app/src/main/AndroidManifest.xml

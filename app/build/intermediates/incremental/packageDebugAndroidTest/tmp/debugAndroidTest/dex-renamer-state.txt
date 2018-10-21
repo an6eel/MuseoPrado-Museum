@@ -1,0 +1,7 @@
+#Sun Oct 21 20:14:36 CEST 2018
+base.0=/home/angel/Descargas/MuseoPrado-Museum/app/build/intermediates/transforms/dexMerger/androidTest/debug/1
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/home/angel/Descargas/MuseoPrado-Museum/app/build/intermediates/transforms/dexMerger/androidTest/debug/0
