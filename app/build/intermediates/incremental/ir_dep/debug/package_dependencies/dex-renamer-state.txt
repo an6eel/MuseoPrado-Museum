@@ -1,4 +1,7 @@
-#Sun Oct 21 19:57:17 CEST 2018
-base.0=/home/angel/Descargas/MuseoPrado-Museum/app/build/intermediates/transforms/dexMerger/debug/10
+#Fri Nov 02 15:29:47 CET 2018
+base.0=C\:\\Users\\agarc\\Desktop\\MuseoPrado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.1=classes2.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=C\:\\Users\\agarc\\Desktop\\MuseoPrado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10

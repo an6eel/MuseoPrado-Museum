@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "488198580596",
+    "firebase_url": "https://name-5b700.firebaseio.com",
+    "project_id": "name-5b700",
+    "storage_bucket": "name-5b700.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488198580596:android:bf4b6fac49484c7d",
+        "android_client_info": {
+          "package_name": "com.example.agarc.museoprado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488198580596-j0bcto4do30lbehcgledrklh3aou1e6j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agarc.museoprado",
+            "certificate_hash": "818d1a04d57b44340a375d866439a1cc20c28145"
+          }
+        },
+        {
+          "client_id": "488198580596-vdnj8o0h4l2oathci1a25t16kau9husf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkc0M8cSEmvrLEhd97U7jjE7Q_f_g7tVM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488198580596-r4f4taj4gmg4ksaa98cnvndoljr4n809.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

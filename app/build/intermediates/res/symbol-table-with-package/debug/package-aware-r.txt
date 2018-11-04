@@ -111,6 +111,7 @@ attr buttonBarStyle
 attr buttonGravity
 attr buttonIconDimen
 attr buttonPanelSideLayout
+attr buttonSize
 attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
@@ -150,6 +151,7 @@ attr chipStrokeWidth
 attr chipStyle
 attr circleCenterX
 attr circleCenterY
+attr circleCrop
 attr closeIcon
 attr closeIconEnabled
 attr closeIconEndPadding
@@ -172,6 +174,7 @@ attr colorControlNormal
 attr colorError
 attr colorPrimary
 attr colorPrimaryDark
+attr colorScheme
 attr colorSecondary
 attr colorSwitchThumbNormal
 attr commitIcon
@@ -284,6 +287,8 @@ attr iconStartPadding
 attr iconTint
 attr iconTintMode
 attr iconifiedByDefault
+attr imageAspectRatio
+attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr indeterminateProgressStyle
 attr initialActivityCount
@@ -431,6 +436,7 @@ attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
 attr reverseLayout
 attr rippleColor
+attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -636,6 +642,17 @@ color cardview_shadow_start_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color common_google_signin_btn_text_dark
+color common_google_signin_btn_text_dark_default
+color common_google_signin_btn_text_dark_disabled
+color common_google_signin_btn_text_dark_focused
+color common_google_signin_btn_text_dark_pressed
+color common_google_signin_btn_text_light
+color common_google_signin_btn_text_light_default
+color common_google_signin_btn_text_light_disabled
+color common_google_signin_btn_text_light_focused
+color common_google_signin_btn_text_light_pressed
+color common_google_signin_btn_tint
 color cyan900
 color default_left_bubble_color
 color default_right_bubble_color
@@ -710,6 +727,7 @@ color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1056,7 +1074,27 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable border
 drawable circle
+drawable common_full_open_on_phone
+drawable common_google_signin_btn_icon_dark
+drawable common_google_signin_btn_icon_dark_focused
+drawable common_google_signin_btn_icon_dark_normal
+drawable common_google_signin_btn_icon_dark_normal_background
+drawable common_google_signin_btn_icon_disabled
+drawable common_google_signin_btn_icon_light
+drawable common_google_signin_btn_icon_light_focused
+drawable common_google_signin_btn_icon_light_normal
+drawable common_google_signin_btn_icon_light_normal_background
+drawable common_google_signin_btn_text_dark
+drawable common_google_signin_btn_text_dark_focused
+drawable common_google_signin_btn_text_dark_normal
+drawable common_google_signin_btn_text_dark_normal_background
+drawable common_google_signin_btn_text_disabled
+drawable common_google_signin_btn_text_light
+drawable common_google_signin_btn_text_light_focused
+drawable common_google_signin_btn_text_light_normal
+drawable common_google_signin_btn_text_light_normal_background
 drawable cube
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1066,6 +1104,9 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable face_1
 drawable face_2
+drawable galeria
+drawable googleg_disabled_color_18
+drawable googleg_standard_color_18
 drawable ic_account_circle
 drawable ic_action_add
 drawable ic_action_info
@@ -1085,6 +1126,8 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_report
 drawable ic_user
 drawable icon_shape
+drawable left_arrow
+drawable marco
 drawable message_text_shape_left
 drawable message_text_shape_right
 drawable mic
@@ -1106,8 +1149,10 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable prado
 drawable prado2
 drawable pradol
+drawable right_arrow
 drawable round_button
 drawable speaker
 drawable speaker_silent
@@ -1120,6 +1165,7 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id action0
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1140,18 +1186,22 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id adjust_height
+id adjust_width
+id agent
 id alertTitle
 id all
 id always
 id appbar
 id async
+id author
 id auto
 id barrier
 id beginning
 id blocking
 id bottom
-id button
 id buttonPanel
+id cancel_action
 id center
 id center_horizontal
 id center_vertical
@@ -1169,6 +1219,7 @@ id contentPanel
 id coordinator
 id custom
 id customPanel
+id dark
 id dateLabelText
 id decor_content_parent
 id default_activity_button
@@ -1182,6 +1233,7 @@ id direct
 id disableHome
 id edit_query
 id end
+id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -1193,6 +1245,7 @@ id fill_vertical
 id filled
 id fixed
 id forever
+id gallery
 id ghost_view
 id gone
 id group_divider
@@ -1201,11 +1254,9 @@ id home
 id homeAsUp
 id icon
 id icon_group
+id icon_only
 id ifRoom
 id image
-id imageView
-id imageView13
-id imageView14
 id info
 id inputBox
 id invisible
@@ -1214,6 +1265,7 @@ id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
 id left
+id light
 id line1
 id line3
 id listMode
@@ -1222,6 +1274,7 @@ id listening
 id mainMessageContainer
 id mainlayout
 id masked
+id media_actions
 id message
 id messageView
 id message_link
@@ -1232,6 +1285,8 @@ id micButton
 id micContainer
 id middle
 id mini
+id mp1
+id mp2
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
@@ -1246,6 +1301,8 @@ id optionButton
 id optionButtonContainer
 id outline
 id packed
+id paint
+id painting
 id parallax
 id parent
 id parentPanel
@@ -1253,6 +1310,7 @@ id parent_matrix
 id partialResultsTextView
 id percent
 id pin
+id prado
 id progress_circular
 id progress_horizontal
 id radio
@@ -1300,6 +1358,7 @@ id src_over
 id standard
 id start
 id statusContainer
+id status_bar_latest_event_content
 id status_icon_image_view
 id status_text_view
 id stretch
@@ -1337,12 +1396,15 @@ id transition_transform
 id uniform
 id unlabeled
 id up
+id url
 id useLogo
 id userIconContainer
 id user_icon
 id usernameContainer
+id view
 id view_offset_helper
 id visible
+id wide
 id withText
 id wrap
 id wrap_content
@@ -1354,6 +1416,7 @@ integer cancel_button_image_alpha
 integer config_tooltipAnimTime
 integer design_snackbar_text_max_lines
 integer design_tab_indicator_anim_duration_ms
+integer google_play_services_version
 integer hide_password_duration
 integer mtrl_btn_anim_delay_ms
 integer mtrl_btn_anim_duration_ms
@@ -1413,6 +1476,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout footer_view
+layout gallery
 layout message_link_left
 layout message_link_right
 layout message_picture_left
@@ -1427,8 +1491,17 @@ layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout option_button
@@ -1492,6 +1565,24 @@ string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
 string check_internet_connection
+string common_google_play_services_enable_button
+string common_google_play_services_enable_text
+string common_google_play_services_enable_title
+string common_google_play_services_install_button
+string common_google_play_services_install_text
+string common_google_play_services_install_title
+string common_google_play_services_notification_channel_name
+string common_google_play_services_notification_ticker
+string common_google_play_services_unknown_issue
+string common_google_play_services_unsupported_text
+string common_google_play_services_update_button
+string common_google_play_services_update_text
+string common_google_play_services_update_title
+string common_google_play_services_updating_text
+string common_google_play_services_wear_update_text
+string common_open_on_phone
+string common_signin_button_text
+string common_signin_button_text_long
 string default_aidialog_title
 string default_date_cell_text
 string default_text_long
@@ -1499,9 +1590,16 @@ string default_text_short
 string default_time_text
 string default_user_name_1
 string default_user_name_2
+string default_web_client_id
 string error
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string firebase_database_url
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string input_hint
 string logo
@@ -1513,6 +1611,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string permission_denied
 string permission_explanation
+string project_id
 string search_menu_title
 string seen
 string send
@@ -1806,9 +1905,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow
@@ -2073,6 +2177,7 @@ styleable LinearConstraintLayout android_orientation
 styleable LinearLayoutCompat android_gravity android_orientation android_baselineAligned android_baselineAlignedChildIndex android_weightSum divider dividerPadding measureWithLargestChild showDividers
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
+styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
 styleable MaskedColorView mainColor
 styleable MaterialButton android_insetLeft android_insetRight android_insetTop android_insetBottom backgroundTint backgroundTintMode cornerRadius icon iconGravity iconPadding iconSize iconTint iconTintMode rippleColor strokeColor strokeWidth
 styleable MaterialCardView strokeColor strokeWidth
@@ -2089,6 +2194,7 @@ styleable RecyclerView android_orientation android_descendantFocusability fastSc
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
+styleable SignInButton buttonSize colorScheme scopeUris
 styleable Snackbar snackbarButtonStyle snackbarStyle
 styleable SnackbarLayout android_maxWidth elevation maxActionInlineWidth
 styleable SoundLevelButton centerColor circleCenterX circleCenterY haloColor maxRadius minRadius state_initializing_tts state_listening state_speaking state_waiting
