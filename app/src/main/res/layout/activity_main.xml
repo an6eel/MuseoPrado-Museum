@@ -1,81 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#FCE4B2">
 
-    <android.support.constraint.ConstraintLayout
+
+    <Button
+        android:id="@+id/gallery"
+        android:layout_width="245dp"
+        android:layout_height="65dp"
+        android:layout_above="@+id/agent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="sans-serif"
+        android:onClick="openGallery"
+        android:text="Entrar al museo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/agent"
+        android:layout_width="245dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="111dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="sans-serif"
+        android:onClick="openAgent"
+        android:text="Consultar al agente"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
+
+    <RelativeLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:background="@color/colorPrimary">
 
         <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginLeft="28dp"
+            android:id="@+id/mp1"
+            android:layout_width="103dp"
+            android:layout_height="85dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="281dp"
+            android:layout_marginBottom="8dp"
             android:contentDescription="@string/logo"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:srcCompat="@drawable/pradol"
-            tools:layout_editor_absoluteY="0dp" />
+            app:srcCompat="@drawable/pradol" />
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/mp2"
             android:layout_width="246dp"
-            android:layout_height="64dp"
-            android:layout_marginLeft="12dp"
+            android:layout_height="58dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
             android:contentDescription="@string/logo"
-            app:layout_constraintLeft_toRightOf="@id/imageView14"
-            app:srcCompat="@drawable/prado2"
-            tools:layout_editor_absoluteY="0dp" />
-    </android.support.constraint.ConstraintLayout>
+            app:srcCompat="@drawable/prado2" />
+    </RelativeLayout>
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="2dp">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="212dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="98dp"
+        android:text="¡BIENVENIDO!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¡BIENVENIDO!"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/prado"
+        android:layout_width="wrap_content"
+        android:layout_height="231dp"
+        android:layout_above="@+id/gallery"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="181dp"
+        android:layout_marginBottom="19dp"
+        app:srcCompat="@drawable/prado" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:layout_width="306dp"
-            android:layout_height="321dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:srcCompat="@drawable/velazquez" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="249dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:background="@drawable/round_button"
-            android:fontFamily="sans-serif"
-            android:onClick="openAgent"
-            android:text=" Pulsa aqui para que pueda ayudarte"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold" />
-    </android.support.constraint.ConstraintLayout>
-
-</LinearLayout>
+</RelativeLayout>

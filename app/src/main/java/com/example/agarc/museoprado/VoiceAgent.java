@@ -21,7 +21,6 @@ import ai.api.AIServiceException;
 import ai.api.android.AIConfiguration;
 import ai.api.model.AIRequest;
 import ai.api.model.AIResponse;
-import ai.api.model.ResponseMessage;
 import ai.api.model.Result;
 import pl.droidsonroids.gif.GifImageButton;
 
@@ -81,17 +80,9 @@ public class VoiceAgent extends Chat implements RecognitionListener   {
                 if(aiResponse != null){
 
                     final Result res = aiResponse.getResult();
-                    List<ResponseMessage> response_message = res.getFulfillment().getMessages();
 
-                    for (ResponseMessage rm : response_message){
-                        ResponseMessage.ResponseSpeech msg = (ResponseMessage.ResponseSpeech) rm;
-                        List<String> resf = msg.getSpeech();
-                        for(String s:resf){
-                            putResponse(s, com.github.bassaer.chatmessageview.model.Message.Type.TEXT,null);
-                            speak(s);
-                        }
-
-                    }
+                    putResponse(res.getFulfillment().getSpeech(), com.github.bassaer.chatmessageview.model.Message.Type.TEXT,null);
+                    speak(res.getFulfillment().getSpeech());
                 }
 
             }
@@ -110,7 +101,7 @@ public class VoiceAgent extends Chat implements RecognitionListener   {
     public void onRmsChanged(float rmsdB) { }
 
     @Override
-    public void onBufferReceived(byte[] buffer) { }
+    public void onBufferReceived(byte[] buffer) {}
 
     @Override
     public void onEndOfSpeech() {

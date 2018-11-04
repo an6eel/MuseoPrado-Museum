@@ -2,6 +2,7 @@ package com.example.agarc.museoprado;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,6 +16,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -39,6 +41,7 @@ public class VoiceActivity extends AppCompatActivity{
     private final int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 22;
 
     VoiceAgent agent;
+    private MultiTouchHandler scroll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -49,8 +52,73 @@ public class VoiceActivity extends AppCompatActivity{
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        scroll = new MultiTouchHandler(getApplicationContext()) {
+            @Override
+            public boolean scrollRight() {
+                return false;
+            }
+
+            @Override
+            public boolean scrollLeft() {
+                return false;
+            }
+
+            @Override
+            public boolean scrollUp() {
+                setAgentButton(null);
+                return true;
+            }
+
+            @Override
+            public boolean scrollDown() {
+                return false;
+            }
+
+            @Override
+            public boolean mTouchUp() {
+                return false;
+            }
+
+            @Override
+            public boolean mTouchLeft() {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                return false;
+            }
+
+            @Override
+            public boolean mTouchRight() {
+                Intent intent = new Intent(getApplicationContext(),Gallery.class);
+                startActivity(intent);
+                return true;
+            }
+
+            @Override
+            public boolean mTouchDown() {
+                finish();
+                return true;
+            }
+
+            @Override
+            public boolean mTouchCenter() {
+                setAgentButton(null);
+                return true;
+            }
+
+            @Override
+            public void onLongPress(MotionEvent e) {
+
+            }
+        };
 
         MessageView ch = (MessageView) findViewById(R.id.chat);
+        ch.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                scroll.setEvent(event);
+                return true;
+            }
+        });
         agent = new VoiceAgent(this,ch);
     }
 
@@ -102,5 +170,11 @@ public class VoiceActivity extends AppCompatActivity{
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO},
                     MY_PERMISSIONS_REQUEST_RECORD_AUDIO); //Callback in "onRequestPermissionResult"
         }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        scroll.setEvent(event);
+        return super.onTouchEvent(event);
     }
 }
