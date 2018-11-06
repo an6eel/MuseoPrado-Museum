@@ -1120,6 +1120,7 @@ drawable ic_error_outline
 drawable ic_launcher
 drawable ic_mail_outline
 drawable ic_markunread
+drawable ic_microphone
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
@@ -1257,6 +1258,8 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageView13
+id imageView14
 id info
 id inputBox
 id invisible
@@ -1285,8 +1288,6 @@ id micButton
 id micContainer
 id middle
 id mini
-id mp1
-id mp2
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply

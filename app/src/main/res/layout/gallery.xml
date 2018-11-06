@@ -1,49 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FCE4B2">
-
-    <ImageView
-        android:id="@+id/paint"
-        android:layout_width="match_parent"
-        android:layout_height="368dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="147dp" />
-
-    <TextView
-        android:id="@+id/painting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/paint"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginBottom="116dp"
-        android:textAlignment="center"
-        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/author"
         android:layout_width="wrap_content"
         android:layout_height="34dp"
-        android:layout_alignTop="@+id/appbar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="87dp"
-        android:layout_marginEnd="111dp"
-        android:layout_marginBottom="573dp"
+        app:layout_constraintBottom_toTopOf="@+id/paint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="2dp"
         android:textAlignment="center"
-        android:textSize="36sp" />
+        android:textSize="28sp"
+        android:text="AUTHOR"/>
+
+    <ImageView
+        android:id="@+id/paint"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/painting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/paint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:text="PAINTING"/>
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -60,43 +52,39 @@
             app:title="GALERIA"></android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
+
     <TextView
         android:id="@+id/info"
         android:layout_width="220dp"
         android:layout_height="31dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="169dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:text="Mas informacion sobre el autor:  " />
 
     <TextView
         android:id="@+id/url"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_alignTop="@+id/info"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
         android:autoLink="web"
         android:text="Museo del Prado"
         android:textColor="@color/design_default_color_primary" />
 
-    <view
+    <TextView
         android:id="@+id/view"
-        class="pl.droidsonroids.gif.GifTextView"
         android:layout_width="match_parent"
-        android:layout_height="346dp"
-        android:layout_alignTop="@+id/paint"
-        android:layout_alignBottom="@+id/paint"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="17dp"
+        android:layout_height="300dp"
         android:background="@drawable/border"
         android:padding="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:scrollbars="vertical" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

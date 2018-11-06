@@ -44,16 +44,16 @@ public final class R {
         private drawable() {}
 
         public static final int cube = 0x7f070071;
-        public static final int mic_control = 0x7f070096;
-        public static final int microphone_control = 0x7f070097;
-        public static final int speaker = 0x7f0700ac;
-        public static final int speaker_silent = 0x7f0700ad;
+        public static final int mic_control = 0x7f070097;
+        public static final int microphone_control = 0x7f070098;
+        public static final int speaker = 0x7f0700ad;
+        public static final int speaker_silent = 0x7f0700ae;
     }
     public static final class id {
         private id() {}
 
-        public static final int micButton = 0x7f08007a;
-        public static final int micContainer = 0x7f08007b;
+        public static final int micButton = 0x7f08007c;
+        public static final int micContainer = 0x7f08007d;
         public static final int partialResultsTextView = 0x7f080094;
         public static final int titleTextView = 0x7f0800df;
     }
