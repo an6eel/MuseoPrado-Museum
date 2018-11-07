@@ -35,24 +35,57 @@ import java.util.Locale;
 
 import pl.droidsonroids.gif.GifImageButton;
 
+/**
+ * Activity encargada del agente conversacional
+ */
 public class VoiceActivity extends AppCompatActivity{
 
+    /**
+     * Flag que indica si el agente está escuchando
+     */
     private boolean FLAG_BUTTON=false;
+
+    /**
+     * Codigo de solicitud de permisos de grabación de audio
+     */
+
     private final int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 22;
 
+    /**
+     * Agente conversacional {@link VoiceAgent}
+     */
+
     VoiceAgent agent;
+
+    /**
+     * Atributo de tipo {@link MultiTouchHandler} encargado de controlar los gestos en la pantalla
+     */
+
     private MultiTouchHandler scroll;
+
+    /**
+     * <pre>
+     * Inicializa el Activity, el controlador de gestos en la pantalla, y el agente pasandole
+     * MessageView que es donde se mostrará el Chat
+     * @param savedInstanceState
+     * Gestos:
+     *          {@link MultiTouchHandler#scrollUp()}: El agente pasa a escuchar
+     *          {@link MultiTouchHandler#mTouchRight()} : Abre la galeria
+     *          {@link MultiTouchHandler#mTouchLeft()} : Abre la pantalla principal
+     *          {@link MultiTouchHandler#mTouchCenter()} : El agente pasa a escuchar
+     *          {@link MultiTouchHandler#mTouchDown()} : Cierra la aplicación
+     * </pre>
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voice);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        scroll = new MultiTouchHandler(getApplicationContext()) {
+        scroll = new MultiTouchHandler(getApplicationContext(),getWindowManager().getDefaultDisplay()) {
             @Override
             public boolean scrollRight() {
                 return false;
@@ -122,6 +155,13 @@ public class VoiceActivity extends AppCompatActivity{
         agent = new VoiceAgent(this,ch);
     }
 
+    /**
+     * Hace que el agente pase a escuchar
+     * @see {@link VoiceAgent#listen()}
+     * @see {@link VoiceAgent#stopListening()}
+     * @param view
+     */
+
     public void setAgentButton(View view){
 
         GifImageButton but = (GifImageButton) findViewById(R.id.listening);
@@ -157,6 +197,10 @@ public class VoiceActivity extends AppCompatActivity{
         }
     }
 
+    /**
+     * Comprueba que se poseen los permisos de grabación de audio
+     */
+
     public void checkASRPermission() {
         if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.RECORD_AUDIO)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -171,6 +215,12 @@ public class VoiceActivity extends AppCompatActivity{
                     MY_PERMISSIONS_REQUEST_RECORD_AUDIO); //Callback in "onRequestPermissionResult"
         }
     }
+
+    /**
+     * Pasa el control de los {@link MotionEvent} a nuestro controladores de gestos
+     * @param event
+     * @return
+     */
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {

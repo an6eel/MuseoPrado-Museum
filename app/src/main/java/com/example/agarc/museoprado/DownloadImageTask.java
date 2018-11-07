@@ -15,6 +15,11 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
+/**
+ * Clase para para hacer una solicitud asincrona que tiene como objetivo obtener
+ * una imagen descargada de la red a partir de un url
+ */
 public class DownloadImageTask extends AsyncTask<String, Integer, Bitmap> {
 
     Context context;
@@ -42,16 +47,6 @@ public class DownloadImageTask extends AsyncTask<String, Integer, Bitmap> {
         try {
 
             url = new URL(params[0]);
-
-           /* HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-            httpURLConnection.setDoOutput(true);
-            httpURLConnection.connect();
-            responseCode = httpURLConnection.getResponseCode();
-
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                in = httpURLConnection.getInputStream();
-                bitmap = BitmapFactory.decodeStream(in);
-    */
             try {
                 InputStream in = url.openStream();
                 bitmap= BitmapFactory.decodeStream(in);
@@ -63,8 +58,7 @@ public class DownloadImageTask extends AsyncTask<String, Integer, Bitmap> {
             canvas.drawColor(Color.parseColor("#3d1e00"));
             canvas.drawBitmap(bitmap,20, 20, null);
             bitmap = bmpWithBorder;
-                /*in.close();
-            }*/
+
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {

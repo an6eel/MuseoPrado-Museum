@@ -12,13 +12,35 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
+/**
+ * Clase que implementa un Chat donde un agente escribirá
+ * los mensages recibidos y enviados
+ */
 
 public class Chat {
-
+    /**
+     * View donde se escriben los mensajes
+     * @see <a href="https://github.com/bassaer/ChatMessageView">MessageView</a>
+     */
     MessageView chat;
+
+    /**
+     *  Usuario que envia mensajes al agente
+     *  @see <a href="https://github.com/bassaer/ChatMessageView">IChatUser/a>
+     */
     final IChatUser you;
+    /**
+     *  Agente
+     *  @see <a href="https://github.com/bassaer/ChatMessageView">IChatUser/a>
+     */
+
     final IChatUser agent;
 
+    /**
+     * Constructor del Chat
+     * Se inicializa los usuarios y el chat
+     * @param ch
+     */
     public Chat(MessageView ch){
         chat = ch;
         you = new IChatUser() {
@@ -73,6 +95,10 @@ public class Chat {
         this.conf();
     }
 
+    /**
+     * Establece la configuración del chat
+     */
+
     private void conf(){
         chat.init();
         chat.setRightBubbleColor(Color.parseColor("#5d3e2b"));
@@ -86,6 +112,11 @@ public class Chat {
         chat.setMessageMarginBottom(15);
     }
 
+    /**
+     * Escribe en el chat un mensaje enviado por el usuario
+     * @param msg
+     */
+
     protected void putRequest(String msg){
         Message msg1 = new Message.Builder()
                 .setUser(you)
@@ -97,6 +128,13 @@ public class Chat {
         chat.setMessage(msg1);
         chat.scrollToEnd();
     }
+
+    /**
+     * Escribe en el chat la respuesta enviada por el agente
+     * @param msg
+     * @param type
+     * @param image
+     */
 
     protected void putResponse(String msg, Message.Type type,Bitmap image){
         Message msg1 = new Message.Builder()
@@ -120,6 +158,10 @@ public class Chat {
         chat.scrollToEnd();
     }
 
+    /**
+     * Obtiene todos los mensajes del chat
+     * @return Lista de mensajes
+     */
     protected ArrayList<Message> getLog(){
         return chat.getMessageList();
     }

@@ -3,6 +3,7 @@ package com.example.agarc.museoprado;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -31,19 +32,98 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Activity encargada de la Galeria
+ */
 
 public class Gallery extends AppCompatActivity {
 
+
+    /**
+     * Conexion con la base de Datos Firebase
+     */
+
     private FirebaseFirestore db;
+
+    /**
+     *  Sensor {@link MuseumSensor} para controlar los sensores en la pantalla principal
+     */
+
     private MuseumSensor sensor;
+
+    /**
+     * Atributo de tipo {@link MultiTouchHandler} encargado de controlar los gestos en la pantalla
+     */
+
     private MultiTouchHandler scroll;
+
+    /**
+     * View que muestra la informacion de la obra/autor
+     */
+
     private TextView info;
+
+    /**
+     * Lista de los artistas almacenados en la base de datos
+     * @see {@link DocumentSnapshot}
+     */
+
     private List<DocumentSnapshot> artists;
+
+    /**
+     * Lista de obras pertenecientes a {@link #ARTIST} almacenadas en la base de Datos
+     * @see {@link DocumentSnapshot}
+     */
     private List<DocumentSnapshot> paintings;
+
+    /**
+     * Artista de la base de datos que se esta consultando en cada momento
+     * @see {@link DocumentSnapshot}
+     */
+
     private static DocumentSnapshot ARTIST;
+
+    /**
+     * Indice del artista actual
+     */
+
     private int INDEX_ART;
+
+    /**
+     * Indice de la obra actual
+     */
+
     private int INDEX_PAINT;
+
+    /**
+     * Flag que indica si {@link #info} se está mostrando en pantalla
+     */
+
     private boolean view;
+
+    /**
+     * <pre>
+     * Inicializa el Activity, el controlador de sensores y gestos, y la base de Datos Firebase
+     *
+     * Gestos:
+     *         {@link MultiTouchHandler#scrollRight()} : Siguiente Obra
+     *         {@link MultiTouchHandler#scrollLeft()} : Obra Anterior
+     *         {@link MultiTouchHandler#scrollUp()} : Siguiente artista
+     *         {@link MultiTouchHandler#scrollDown()} : Cierra la ventana de informacion si se esta mostrando, artista anterior en otro caso
+     *         {@link MultiTouchHandler#mTouchRight()} : Vuelve a la pantalla principal
+     *         {@link MultiTouchHandler#mTouchLeft()} ()} : Abre el agente conversacional
+     *         {@link MultiTouchHandler#mTouchCenter()} : Muestra información en la pantalla de la obra/artista
+     *         {@link MultiTouchHandler#mTouchDown()} : Cierra la aplicación
+     *         {@link MultiTouchHandler#mTouchUp()}} : Abre la pagina web del artista en el Museo del Prado
+     * Sensores:
+     *         {@link MuseumSensor#Snext()} : Siguiente Obra del artista seleccionado
+     *         {@link MuseumSensor#Sprevious()} : Obra anterior del artista seleccionado
+     *         {@link MuseumSensor#Sup()} : Cambia de autor
+     *         {@link MuseumSensor#sound(TextToSpeech)} : Da información de la obra/artista por el microfono interno
+     * </pre>
+     *
+     * @param savedInstanceState
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -78,8 +158,26 @@ public class Gallery extends AppCompatActivity {
                     nextArt();
                 }
             }
+
+            @Override
+            public void sound(TextToSpeech tts) {
+                Toast.makeText(getApplicationContext(), "Información", Toast.LENGTH_LONG).show();
+                turnOffSpeaker();
+
+                if (INDEX_PAINT == -1) {
+                    String cadena = (ARTIST.get("obras")).toString();
+                    String info = " Las obras de " + ARTIST.get("name") + " son " + cadena;
+                    tts.speak(info, TextToSpeech.QUEUE_FLUSH, null, null);
+                }else {
+                    DocumentSnapshot paint = paintings.get(INDEX_PAINT);
+                    String resumen = paint.get("resumen").toString();
+                    ArrayList<String> name = (ArrayList<String>) paint.get("name");
+                    String info = " Voy a contarte un poco sobre " + name.get(0) + ". " + resumen;
+                    tts.speak(info, TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+            }
         };
-        scroll = new MultiTouchHandler(getApplicationContext()) {
+        scroll = new MultiTouchHandler(getApplicationContext(),getWindowManager().getDefaultDisplay()) {
             @Override
             public boolean scrollRight() {
                 if(!view)
@@ -162,6 +260,10 @@ public class Gallery extends AppCompatActivity {
 
     }
 
+    /**
+     * Inicializa la base de Datos y realiza las primeras consultas
+     */
+
     public void initDB() {
 
         db = FirebaseFirestore.getInstance();
@@ -204,6 +306,11 @@ public class Gallery extends AppCompatActivity {
         sensor.unregister();
     }
 
+    /**
+     * Actualiza la informacion de obra/autor mostrada en pantalla en caso de que se haya cambiado
+     * de autor/obra
+     */
+
     public void update(){
         TextView author = (TextView) findViewById(R.id.author);
         TextView painting = (TextView) findViewById(R.id.painting);
@@ -243,6 +350,10 @@ public class Gallery extends AppCompatActivity {
 
     }
 
+    /**
+     * Obtiene la siguiente obra de {@link #ARTIST}
+     */
+
     public void nextImg(){
         INDEX_PAINT+=1;
         if(INDEX_PAINT == paintings.size())
@@ -250,6 +361,10 @@ public class Gallery extends AppCompatActivity {
 
         update();
     }
+
+    /**
+     * Obtiene la obra anterior de {@link #ARTIST}
+     */
 
     public void previousImg(){
         if(INDEX_PAINT == -1)
@@ -259,6 +374,10 @@ public class Gallery extends AppCompatActivity {
 
         update();
     }
+
+    /**
+     * Obtiene el siguiente artista de la lista {@link #artists}
+     */
 
     public void nextArt(){
         INDEX_ART= (INDEX_ART+1 ) % artists.size();
@@ -277,6 +396,10 @@ public class Gallery extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Obtiene el artista anterior de la lista {@link #artists}
+     */
 
     public void previousArt(){
         if(INDEX_ART == 0)
@@ -299,11 +422,22 @@ public class Gallery extends AppCompatActivity {
 
     }
 
+    /**
+     * Pasa el control de los {@link MotionEvent} a nuestro controladores de gestos
+     * @param event
+     * @return
+     */
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         scroll.setEvent(event);
         return super.onTouchEvent(event);
     }
+
+    /**
+     * Obtiene toda la informacion almacenada en la base de datos sobre {@link #ARTIST}
+     * @return info
+     */
 
     public String getInfoArt(){
         String info = "";
@@ -333,6 +467,12 @@ public class Gallery extends AppCompatActivity {
             info+=(","+ life.get(i));
         return info;
     }
+
+    /**
+     * Obtiene toda la informacion sobre la obra consultada actualemente contenida en la
+     * base de Datos
+     * @return Info
+     */
 
     public String getInfoPaint(){
         String info = "";
