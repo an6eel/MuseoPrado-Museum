@@ -27,7 +27,7 @@ public abstract class  MuseumSensor implements SensorEventListener {
      * Limite de movimiento para considerar que se ha realizado un shake
      */
 
-    private static final float SHAKE_THRESHOLD = 2.0f;
+    private static final float SHAKE_THRESHOLD = 3.0f;
 
     /**
      * Limite de tiempo que debe pasar entre un shake y otro
@@ -44,7 +44,7 @@ public abstract class  MuseumSensor implements SensorEventListener {
     /**
      * Limite de tiempo que debe haber entre una rotacion y otra
      */
-    private static final int ROTATION_WAIT_TIME_MS = 200;
+    private static final int ROTATION_WAIT_TIME_MS = 250;
 
     /**
      * Sensor handler {@link SensorManager}
@@ -84,7 +84,9 @@ public abstract class  MuseumSensor implements SensorEventListener {
      * Atributo que almacenará los valores de la rotación
      */
 
-    private float rotation_vector[] = new float[3];
+    private float orientation[] = new float[3];
+    float[] rMat = new float[9];
+    int mAzimuth;
 
     /**
      * Atributo para controlar cuanto tiempo ha pasado entre un shake y otro
@@ -225,7 +227,7 @@ public abstract class  MuseumSensor implements SensorEventListener {
             linearAcceleration = detectAcceleration(event);
         }
         else if(event.sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
-            rotation_vector = event.values.clone();
+            mAzimuth = computeAzimuth(event.values.clone());
 
             float[] rotationMatrix = new float[16];
             SensorManager.getRotationMatrixFromVector(rotationMatrix, event.values);
@@ -281,12 +283,18 @@ public abstract class  MuseumSensor implements SensorEventListener {
 
         if((linearAcceleration == linearAcceleration.y_minus || linearAcceleration == LinearAcceleration.y_plus) && rotation ==Rotation.x){
             Sup();
+            rotation = Rotation.noRotation;
+            linearAcceleration = LinearAcceleration.noAcceleration;
         }
-        else if(linearAcceleration == LinearAcceleration.x_minus && rotation_vector[2] > 0.30){
+        else if(linearAcceleration == LinearAcceleration.x_minus && (mAzimuth > 270  && mAzimuth < 360-10)){
             Sprevious();
+            rotation = Rotation.noRotation;
+            linearAcceleration = LinearAcceleration.noAcceleration;
         }
-        else if(linearAcceleration == linearAcceleration.x_plus && rotation_vector[2] < -0.10){
+        else if(linearAcceleration == linearAcceleration.x_plus && (mAzimuth > 0+10 && mAzimuth < 90)){
             Snext();
+            rotation = Rotation.noRotation;
+            linearAcceleration = LinearAcceleration.noAcceleration;
         }
     }
 
@@ -313,6 +321,14 @@ public abstract class  MuseumSensor implements SensorEventListener {
             }
         }
         return Rotation.noRotation;
+    }
+
+    private int computeAzimuth(float[] values){
+        // calculate th rotation matrix
+        SensorManager.getRotationMatrixFromVector( rMat, values );
+        // get the azimuth value (orientation[0]) in degree
+        return (int)( Math.toDegrees( SensorManager.getOrientation( rMat, orientation )[2] ) + 360 ) % 360;
+
     }
 
     /**
