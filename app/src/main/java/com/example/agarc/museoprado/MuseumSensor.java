@@ -343,10 +343,6 @@ public abstract class  MuseumSensor implements SensorEventListener {
         if ((now - mShakeTime) > SHAKE_WAIT_TIME_MS) {
             mShakeTime = now;
 
-            float gX = event.values[0] / SensorManager.GRAVITY_EARTH;
-            float gY = event.values[1] / SensorManager.GRAVITY_EARTH;
-            float gZ = event.values[2] / SensorManager.GRAVITY_EARTH;
-
             if(event.values[0] < -SHAKE_THRESHOLD){
                 return LinearAcceleration.x_minus;
             }
