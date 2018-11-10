@@ -270,7 +270,6 @@ public abstract class  MuseumSensor implements SensorEventListener {
                 params.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
                 params.screenBrightness = -1f;
                 ((Activity) cxt).getWindow().setAttributes(params);
-                Toast.makeText(cxt.getApplicationContext(), "far", Toast.LENGTH_SHORT).show();
 
                 if (tts != null) {
                     tts.stop();

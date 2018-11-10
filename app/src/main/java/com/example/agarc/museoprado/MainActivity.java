@@ -21,6 +21,8 @@ import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
@@ -90,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
      * Rango alrededor de la ETSIIT en el que podemos usar la aplicación
      */
 
-    private static final double POSITION_THRESHOLD = 15000; // METERS RANGE
+    private static final double POSITION_THRESHOLD = 25000.0; // METERS RANGE
 
     /**
      * <pre>
@@ -208,6 +210,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
+
         sensor = new MuseumSensor(this) {
             @Override
             public void Snext() {
@@ -229,9 +232,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
-
-        TextView z = (TextView) findViewById(R.id.textView);
-
 
         sensor.register();
     }
@@ -357,6 +357,38 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
+
+        ConnectivityManager cm =
+                (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if(!(netInfo != null && netInfo.isConnectedOrConnecting())){
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                    this,R.style.MyDialogTheme);
+
+            // set title
+            alertDialogBuilder.setTitle("Internet");
+
+            alertDialogBuilder
+                    .setMessage("Esta aplicación solo puede usarse con acceso a Internet.")
+                    .setCancelable(false)
+                    .setPositiveButton("Ya estoy conectado",new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog,int id) {
+                            onStart();
+                        }
+                    })
+                    .setNegativeButton("Salir",new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog,int id) {
+                            dialog.cancel();
+                            finish();
+                        }
+                    });
+
+            // create alert dialog
+            AlertDialog alertDialog = alertDialogBuilder.create();
+
+            // show it
+            alertDialog.show();
+        }
 
         if (checkLocationPermission()) {
             gpsTracker = new GPSTracker(this);

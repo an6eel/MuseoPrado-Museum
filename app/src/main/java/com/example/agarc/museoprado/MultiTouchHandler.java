@@ -228,14 +228,14 @@ public abstract class MultiTouchHandler implements OnGestureListener, GestureDet
                 if( !error && (last1._y-first1._y) >= HEIGHT/HEIGHT_SCALE ){
                     if( (last2._y-first2._y) >= HEIGHT/HEIGHT_SCALE && (last2._y-first2._y) < 2*HEIGHT/HEIGHT_SCALE ){
 
-                        if( (first1._x-last1._x)>= WIDTH/WIDTH_SCALE && Math.abs(last2._x-first2._x)< WIDTH/2.7)
+                        if( (first1._x-last1._x)>= WIDTH/WIDTH_SCALE && Math.abs(last2._x-first2._x)< WIDTH/WIDTH_SCALE)
                             mTouchLeft();
                         else if( (last2._x-first2._x) >= WIDTH/WIDTH_SCALE && Math.abs(last1._x-first1._x) <= WIDTH/WIDTH_SCALE)
                             mTouchRight();
                         else if( (Math.abs(last2._x-first2._x)<= WIDTH/WIDTH_SCALE) && (Math.abs(last1._x-first1._x) <= WIDTH/WIDTH_SCALE))
                             mTouchCenter();
                     }
-                    else if((last2._y-first2._y) >= HEIGHT/HEIGHT_SCALE ){
+                    else if((last2._y-first2._y) >= 2*HEIGHT/HEIGHT_SCALE ){
                         mTouchDown();
                     }
                     else if( ( (last2._y-first2._y) < HEIGHT/HEIGHT_SCALE) || ((last1._y-first1._y) < HEIGHT/HEIGHT_SCALE)) {

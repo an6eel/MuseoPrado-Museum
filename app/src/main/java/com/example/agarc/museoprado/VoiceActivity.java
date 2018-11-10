@@ -49,7 +49,7 @@ public class VoiceActivity extends AppCompatActivity{
      * Codigo de solicitud de permisos de grabación de audio
      */
 
-    private final int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 22;
+    private final int AUDIO_RQT_CODE = 22;
 
     /**
      * Agente conversacional {@link VoiceAgent}
@@ -85,6 +85,7 @@ public class VoiceActivity extends AppCompatActivity{
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         scroll = new MultiTouchHandler(getApplicationContext(),getWindowManager().getDefaultDisplay()) {
             @Override
             public boolean scrollRight() {
@@ -145,13 +146,7 @@ public class VoiceActivity extends AppCompatActivity{
         };
 
         MessageView ch = (MessageView) findViewById(R.id.chat);
-        ch.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                scroll.setEvent(event);
-                return true;
-            }
-        });
+
         agent = new VoiceAgent(this,ch);
     }
 
@@ -186,7 +181,7 @@ public class VoiceActivity extends AppCompatActivity{
      * */
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        if(requestCode == MY_PERMISSIONS_REQUEST_RECORD_AUDIO) {
+        if(requestCode == AUDIO_RQT_CODE) {
             // If request is cancelled, the result arrays are empty.
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                 Log.i("SR", "Record audio permission granted");
@@ -212,7 +207,7 @@ public class VoiceActivity extends AppCompatActivity{
 
             // Request the permission.
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO},
-                    MY_PERMISSIONS_REQUEST_RECORD_AUDIO); //Callback in "onRequestPermissionResult"
+                    AUDIO_RQT_CODE); //Callback in "onRequestPermissionResult"
         }
     }
 

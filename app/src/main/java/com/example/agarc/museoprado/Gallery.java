@@ -177,6 +177,7 @@ public class Gallery extends AppCompatActivity {
                 }
             }
         };
+
         scroll = new MultiTouchHandler(getApplicationContext(),getWindowManager().getDefaultDisplay()) {
             @Override
             public boolean scrollRight() {
