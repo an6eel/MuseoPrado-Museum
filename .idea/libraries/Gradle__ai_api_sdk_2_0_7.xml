@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: ai.api:sdk-2.0.7">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sdk-2.0.7.aar/21f837b5dc2202931177560a58a8d61d/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sdk-2.0.7.aar/21f837b5dc2202931177560a58a8d61d/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sdk-2.0.7.aar/78d5f2666d53e8f0056db0a4588b1e7f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sdk-2.0.7.aar/78d5f2666d53e8f0056db0a4588b1e7f/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -27,7 +27,7 @@ public abstract class  MuseumSensor implements SensorEventListener {
      * Limite de movimiento para considerar que se ha realizado un shake
      */
 
-    private static final float SHAKE_THRESHOLD = 3.0f;
+    private static final float SHAKE_THRESHOLD = 5.0f;
 
     /**
      * Limite de tiempo que debe pasar entre un shake y otro
@@ -186,7 +186,7 @@ public abstract class  MuseumSensor implements SensorEventListener {
 
     private void init(){
         mSensorManager = (SensorManager) cxt.getSystemService(Context.SENSOR_SERVICE);
-        mSensorAcc = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
+        mSensorAcc = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mSensorGyr = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         mSensorRo = mSensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
         mProximity = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
@@ -223,8 +223,12 @@ public abstract class  MuseumSensor implements SensorEventListener {
 
         boolean terminado = true;
 
-        if (event.sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
-            linearAcceleration = detectAcceleration(event);
+        if (event.accuracy == SensorManager.SENSOR_STATUS_UNRELIABLE) {
+            return;
+        }
+
+        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            linearAcceleration = detectAcceleration(event.values.clone());
         }
         else if(event.sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
             mAzimuth = computeAzimuth(event.values.clone());
@@ -332,32 +336,38 @@ public abstract class  MuseumSensor implements SensorEventListener {
 
     /**
      * Detecta en que sentido se ha realizado la aceleración
-     * @param event
+     * @param values
      * @return
      */
 
-    private LinearAcceleration detectAcceleration(SensorEvent event) {
+    private LinearAcceleration detectAcceleration(float[] values) {
         long now = System.currentTimeMillis();
 
         if ((now - mShakeTime) > SHAKE_WAIT_TIME_MS) {
             mShakeTime = now;
 
-            if(event.values[0] < -SHAKE_THRESHOLD){
+            if(values[0] > SHAKE_THRESHOLD){
+                //Toast.makeText(getApplicationContext(), "MOVEMENT -X", Toast.LENGTH_LONG).show();
                 return LinearAcceleration.x_minus;
             }
-            else if (event.values[0] > SHAKE_THRESHOLD){
+            else if (values[0] < -SHAKE_THRESHOLD){
+                //Toast.makeText(getApplicationContext(), "MOVEMENT +X", Toast.LENGTH_LONG).show();
                 return LinearAcceleration.x_plus;
             }
-            else if(event.values[1] < -SHAKE_THRESHOLD){
+            else if(values[1] < -SHAKE_THRESHOLD){
+                //Toast.makeText(getApplicationContext(), "MOVEMENT -Y", Toast.LENGTH_LONG).show();
                 return LinearAcceleration.y_minus;
             }
-            else if(event.values[1] > SHAKE_THRESHOLD){
+            else if(values[1] > SHAKE_THRESHOLD){
+                //Toast.makeText(getApplicationContext(), "MOVEMENT +Y", Toast.LENGTH_LONG).show();
                 return LinearAcceleration.y_plus;
             }
-            else if(event.values[2] < -SHAKE_THRESHOLD){
+            else if(values[2] < -SHAKE_THRESHOLD){
+                //Toast.makeText(getApplicationContext(), "MOVEMENT -Z", Toast.LENGTH_LONG).show();
                 return LinearAcceleration.z_minus;
             }
-            else if(event.values[2] > SHAKE_THRESHOLD){
+            else if(values[2] > SHAKE_THRESHOLD){
+                //Toast.makeText(getApplicationContext(), "MOVEMENT +Z", Toast.LENGTH_LONG).show();
                 return LinearAcceleration.z_plus;
             }
         }
