@@ -313,7 +313,7 @@ public class VoiceAgent extends Chat implements RecognitionListener   {
      */
 
     public void speak(String msg){
-        tts.speak(msg,TextToSpeech.QUEUE_FLUSH,null,"message");
+        tts.speak(msg,TextToSpeech.QUEUE_ADD,null,"message");
     }
 
     /**
