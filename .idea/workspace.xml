@@ -15,9 +15,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ff67acd5-a6b2-433d-a825-3bde696f7287" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/agarc/museoprado/MuseumSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/agarc/museoprado/MuseumSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/gallery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gallery.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,8 +40,8 @@
       <file leaf-file-name="MuseumSensor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/agarc/museoprado/MuseumSensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2327">
-              <caret line="192" column="79" selection-start-line="192" selection-start-column="79" selection-end-line="192" selection-end-column="79" />
+            <state relative-caret-position="13">
+              <caret line="348" column="46" lean-forward="true" selection-start-line="348" selection-start-column="46" selection-end-line="348" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2682,8 +2679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/agarc/museoprado/MuseumSensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2327">
-          <caret line="192" column="79" selection-start-line="192" selection-start-column="79" selection-end-line="192" selection-end-column="79" />
+        <state relative-caret-position="13">
+          <caret line="348" column="46" lean-forward="true" selection-start-line="348" selection-start-column="46" selection-end-line="348" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
