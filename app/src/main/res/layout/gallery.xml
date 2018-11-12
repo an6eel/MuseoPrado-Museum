@@ -20,7 +20,7 @@
     <ImageView
         android:id="@+id/paint"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -78,7 +78,7 @@
     <TextView
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         android:background="@drawable/border"
         android:padding="20dp"
         android:scrollbars="vertical"

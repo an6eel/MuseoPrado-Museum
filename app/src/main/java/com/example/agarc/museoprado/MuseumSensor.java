@@ -137,6 +137,8 @@ public abstract class  MuseumSensor implements SensorEventListener {
      */
     private boolean FLAG_SOUND = false;
 
+    private float[] mGravity = new float[3];
+
     /**
      * Servicio que se encarga de pasar a voz un texto escrito
      * @see {@link TextToSpeech}
@@ -190,6 +192,9 @@ public abstract class  MuseumSensor implements SensorEventListener {
         mSensorGyr = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         mSensorRo = mSensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
         mProximity = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        mGravity[0] = 0.0f;
+        mGravity[1] = 0.0f;
+        mGravity[2] = 0.0f;
         tts = new TextToSpeech(cxt, null);
     }
 
@@ -343,31 +348,36 @@ public abstract class  MuseumSensor implements SensorEventListener {
     private LinearAcceleration detectAcceleration(float[] values) {
         long now = System.currentTimeMillis();
 
+        final float alpha = 0.8f;
+        float[] linear_acceleration = new float[3];
+
+        mGravity[0] = alpha * mGravity[0] + (1 - alpha) * values[0];
+        mGravity[1] = alpha * mGravity[1] + (1 - alpha) * values[1];
+        mGravity[2] = alpha * mGravity[2] + (1 - alpha) * values[2];
+
+        linear_acceleration[0] = values[0] - mGravity[0];
+        linear_acceleration[1] = values[1] - mGravity[1];
+        linear_acceleration[2] = values[2] - mGravity[2];
+
         if ((now - mShakeTime) > SHAKE_WAIT_TIME_MS) {
             mShakeTime = now;
 
-            if(values[0] > SHAKE_THRESHOLD){
-                //Toast.makeText(getApplicationContext(), "MOVEMENT -X", Toast.LENGTH_LONG).show();
+            if(linear_acceleration[0] > SHAKE_THRESHOLD){
                 return LinearAcceleration.x_minus;
             }
-            else if (values[0] < -SHAKE_THRESHOLD){
-                //Toast.makeText(getApplicationContext(), "MOVEMENT +X", Toast.LENGTH_LONG).show();
+            else if (linear_acceleration[0] < -SHAKE_THRESHOLD){
                 return LinearAcceleration.x_plus;
             }
-            else if(values[1] < -SHAKE_THRESHOLD){
-                //Toast.makeText(getApplicationContext(), "MOVEMENT -Y", Toast.LENGTH_LONG).show();
+            else if(linear_acceleration[1] < -SHAKE_THRESHOLD){
                 return LinearAcceleration.y_minus;
             }
-            else if(values[1] > SHAKE_THRESHOLD){
-                //Toast.makeText(getApplicationContext(), "MOVEMENT +Y", Toast.LENGTH_LONG).show();
+            else if(linear_acceleration[1] > SHAKE_THRESHOLD){
                 return LinearAcceleration.y_plus;
             }
-            else if(values[2] < -SHAKE_THRESHOLD){
-                //Toast.makeText(getApplicationContext(), "MOVEMENT -Z", Toast.LENGTH_LONG).show();
+            else if(linear_acceleration[2] < -SHAKE_THRESHOLD){
                 return LinearAcceleration.z_minus;
             }
-            else if(values[2] > SHAKE_THRESHOLD){
-                //Toast.makeText(getApplicationContext(), "MOVEMENT +Z", Toast.LENGTH_LONG).show();
+            else if(linear_acceleration[2] > SHAKE_THRESHOLD){
                 return LinearAcceleration.z_plus;
             }
         }

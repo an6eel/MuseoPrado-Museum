@@ -34,14 +34,14 @@
         android:id="@+id/prado"
         android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="231dp"
+        android:layout_height="260dp"
         android:layout_gravity="center"
         app:srcCompat="@drawable/prado"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="212dp"
-        android:layout_height="51dp"
+        android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:text="¡BIENVENIDO!"
         android:textAlignment="center"
@@ -54,7 +54,7 @@
     <Button
         android:id="@+id/gallery"
         android:layout_width="245dp"
-        android:layout_height="42dp"
+        android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/round_button"
         android:fontFamily="sans-serif"
@@ -68,7 +68,7 @@
     <Button
         android:id="@+id/agent"
         android:layout_width="245dp"
-        android:layout_height="42dp"
+        android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/round_button"
         android:fontFamily="sans-serif"
