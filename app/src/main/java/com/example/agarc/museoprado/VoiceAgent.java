@@ -293,10 +293,14 @@ public class VoiceAgent extends Chat implements RecognitionListener   {
     }
 
     /**
-     * Metodo que hace que el agente comienze a escuchar
+     * Metodo que hace que el agente comience a escuchar
      */
 
     public void listen(){
+        if (tts != null){
+            tts.stop();
+        }
+
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
 
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -308,12 +312,12 @@ public class VoiceAgent extends Chat implements RecognitionListener   {
     }
 
     /**
-     * Metodo que sintetitza en voz el texto deseado
+     * Metodo que sintetiza en voz el texto deseado
      * @param msg
      */
 
     public void speak(String msg){
-        tts.speak(msg,TextToSpeech.QUEUE_FLUSH,null,"message");
+        tts.speak(msg,TextToSpeech.QUEUE_ADD,null,"message");
     }
 
     /**
